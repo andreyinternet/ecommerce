@@ -1,0 +1,171 @@
+:root {
+  --hero-image: url(../img/hero.png);
+  --header-background: #420078;
+  --marketing-black-background: radial-gradient(#22013c, #000000);
+  --marketing-white-background: #fff;
+  --footer-background: #420078;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+
+}
+
+header {
+  background-color: var(--header-background);
+  padding: 10px 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#app-title,
+#about,
+#products {
+  color: #ffffff;
+  border-radius: 100px;
+}
+
+#app-title {
+  font-family: "regular";
+  margin: 0;
+}
+
+#about,
+#products {
+  font-family: "thin";
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+#about:hover,
+#products:hover {
+  color: #ccc;
+}
+
+#about {
+  margin-left: auto;
+}
+
+#hero {
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    var(--hero-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+#slogan {
+  text-align: center;
+}
+
+#slogan span {
+  font-family: "regular";
+  font-size: 3.8rem;
+  letter-spacing: auto;
+  opacity: 0;
+  animation: fade-in 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: calc(50ms * var(--i));
+}
+
+#hero-text p {
+  text-align: center;
+  font-family: "italic";
+  font-size: 3rem;
+  opacity: 0;
+  animation: fade-in 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.marketing-black,
+.marketing-white {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marketing-black:hover .product, 
+.marketing-white:hover .product {
+  animation: fade-in 4s;
+  animation-fill-mode: forwards;
+}
+
+.marketing-white {
+  background-color: #fff;
+}
+
+.marketing-black {
+  background: var(--marketing-black-background);
+}
+
+.white-title,
+.white-description {
+  color: #fff;
+  text-align: center;
+}
+
+.white-title,
+.black-title {
+  font-family: "regular";
+  font-size: 54px;
+  
+}
+
+.white-description,
+.black-description {
+  font-family: "thin";
+  font-size: 32px;
+}
+
+.product {
+  width: 30%;
+  opacity: 0;
+  animation: fade-out 3s;
+}
+
+.know-more {
+  margin: 40px 0;
+  background-color: #434344;
+  border: none;
+  width: 200px;
+  padding: 10px 0;
+  color: #fff;
+  font-family: "regular";
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.marketing-white {
+  background-color: var(--marketing-white-background);
+  font-family: regular;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--footer-background);
+  padding: 10px 20px;
+}
+
+footer p {
+  color: #aaa;
+  font-family: "thin";
+  font-size: 14px;
+  text-align: center;
+}
